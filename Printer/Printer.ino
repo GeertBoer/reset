@@ -25,7 +25,7 @@ void setup() {
   prompts[0] = new Achievement("What was your highlight of today?");
   prompts[1] = new Achievement("What was your biggest success last week?");
   prompts[2] = new Achievement("What are you most proud of?");
-  prompts[3] = new Achievement("What do you like the most at work?");
+  prompts[3] = new Achievement("What do you like best at work?");
   prompts[4] = new FunFact("60% of our teams said they have been using the experience cabins to relax this week. What do you to ground between meetings?");
   prompts[5] = new GetCreative("Visualize: Draw something you love!");
   prompts[6] = new Goal("What would you want to learn this week?");
@@ -56,6 +56,7 @@ void setup() {
   prompts[31] = new ImagePrompt(boggle_width, boggle_height, boggle_data);
   prompts[32] = new ImagePrompt(empty_width, empty_height, empty_data);
   prompts[33] = new ImagePrompt(kwikmath_width, kwikmath_height, kwikmath_data);
+
 
   // hoogste prompt = maximaal aantal_prompts - 1
 
