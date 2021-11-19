@@ -15,7 +15,7 @@
 
 Adafruit_Thermal printer(&Serial1);
 
-const int aantal_prompts = 34;
+const int aantal_prompts = 45;
 Prompt* prompts[aantal_prompts];
 
 void setup() {
