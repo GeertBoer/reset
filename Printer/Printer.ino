@@ -25,32 +25,32 @@ void setup() {
 
   prompts[0] = new Achievement("What was your highlight of today?");
   prompts[1] = new Achievement("What was your biggest success last week?");
-  prompts[2] = new Achievement("What are you most proud of?");
+  prompts[2] = new Achievement("What are you most proud off?");
   prompts[3] = new Achievement("What do you like best at work?");
   prompts[4] = new FunFact("60% of our team said they have been using the experience cabins to relax this week. What do you to ground between meetings?");
   prompts[5] = new GetCreative("Visualize: Draw something you love!");
-  prompts[6] = new Goal("What would you want to learn this week?");
+  prompts[6] = new Goal("What would you like to learn this week?");
   prompts[7] = new Goal("Quick retrospective: What made you move forward this week? What held you back? What should you do next?");
   prompts[8] = new Goal("Stretch your body: make it a habit to stretch every hour!");
   prompts[9] = new Goal("Breath: Take three deep breaths, observe what you feel and continue.");
   prompts[10] = new Goal("Nature: Go for a walk to get some fresh air.");
   prompts[11] = new Goal("Sound: Listen to your favorite song!");
-  prompts[12] = new Question("Do you use your trip home to let go of the day so you can focus on your homelife");
-  prompts[13] = new Question("Do you use your commute to refocus and relax?");
+  prompts[12] = new Question("How do you spend the time traveling between office and home?");
+  prompts[13] = new Question("Do you use your traveling time to refocus and relax?");
   prompts[14] = new Question("Do you use you travel time to let go of unproductive thoughts to be fully present on arrival?");
-  prompts[15] = new Question("How do you start your day working from home?  ");
+  prompts[15] = new Question("How do you start your day when working from home?  ");
   prompts[16] = new Question("Do you focus your mind and body to begin your day distraction-free?");
   prompts[17] = new Question("How do you end your day working from home?");
   prompts[18] = new Question("Do you disengaged from work and find a place to be present when working from home?");
-  prompts[19] = new Question("How do you keep your working from home?");
+  prompts[19] = new Question("How do you keep your focus working from home?");
   prompts[20] = new Question("What do you do to calm your nerves for challenging tasks?");
   prompts[21] = new Question("How many breaks do you take during your working day?");
   prompts[22] = new Question("Are you fully present when someone is speaking?");
   prompts[23] = new Question("How do you stay calm before though talks?");
-  prompts[24] = new Question("How many time did you stretch today? Keep track!");
-  prompts[25] = new Question("How many glasses of water did you have today? Keep track!");
-  prompts[26] = new Question("What did you have for lunch today? Keep track!");
-  prompts[27] = new Question("How did you sleep last night? Keep track!");
+  prompts[24] = new Question("How many time did you stretch today? Try to keep track of this!");
+  prompts[25] = new Question("How many glasses of water did you have today? Try to keep track of this!");
+  prompts[26] = new Question("What did you have for lunch today? Try to keep track of this!");
+  prompts[27] = new Question("How did you sleep last night? Try to keep track of this!");
   prompts[28] = new Question("Who or what inspires you?");
   prompts[29] = new ImagePrompt("Visualize: The wheel of life, rate 1" , wheel_width, wheel_height, wheel_data);
   prompts[30] = new ImagePrompt("Sudoku", sudoku_width, sudoku_height, sudoku_data);
@@ -66,8 +66,8 @@ void setup() {
   prompts[40] = new joke("Paul: \"I’ve got problems with mathematics.\" \n Richard: \"Me too.\" \n George: \"Yeah, that makes four of us.\"");  
   prompts[41] = new joke("When I greeted my boss in the morning, he told me to have a good day. \n Who am I to argue? So I thanked him and went back home."); 
   prompts[42] = new joke("Me: \"Do you think it’s strange to talk to yourself?\" \n Me: \"No.\" ");  
-
-
+  prompts[43] = new Goal("Get to know you colleagues better! Ask them a fun question!");
+  prompts[44] = new Question("Do you experience a relaxed kind of focus working from home, do recognize distractions?");
 
   // hoogste prompt = maximaal aantal_prompts - 1
 
