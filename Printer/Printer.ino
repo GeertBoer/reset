@@ -24,13 +24,13 @@ void setup() {
 
   prompts[0] = new Achievement("What was your highlight of today?");
   prompts[1] = new Achievement("What was your biggest success last week?");
-  prompts[2] = new Achievement("What are you most proud off?");
-  prompts[3] = new Achievement("What do you like best at work?");
-  prompts[4] = new FunFact("60% of our team said they have been using the experience cabins to relax this week. What do you to ground between meetings?");
+  prompts[2] = new Achievement("What are you most proud of?");
+  prompts[3] = new Achievement("What do you like the most at work?");
+  prompts[4] = new FunFact("60% of our teams said they have been using the experience cabins to relax this week. What do you to ground between meetings?");
   prompts[5] = new GetCreative("Visualize: Draw something you love!");
-  prompts[6] = new Goal("What would you like to learn this week?");
+  prompts[6] = new Goal("What would you want to learn this week?");
   prompts[7] = new Goal("Quick retrospective: What made you move forward this week? What held you back? What should you do next?");
-  prompts[8] = new Goal("Stretch your body: try to stretch every hour!");
+  prompts[8] = new Goal("Stretch your body: make it a habit to stretch every hour!");
   prompts[9] = new Goal("Breath: Take three deep breaths, observe what you feel and continue.");
   prompts[10] = new Goal("Nature: Go for a walk to get some fresh air.");
   prompts[11] = new Goal("Sound: Listen to your favorite song!");
@@ -52,18 +52,11 @@ void setup() {
   prompts[27] = new Question("How did you sleep last night? Keep track!");
   prompts[28] = new Question("Who or what inspires you?");
   prompts[29] = new ImagePrompt(wheel_width, wheel_height, wheel_data);
-  prompts[30] = new ImagePrompt(sudoku_width, sudoku_height, sudoku_data, "Sudoku");
+  prompts[30] = new ImagePrompt("Sudoku", sudoku_width, sudoku_height, sudoku_data);
   prompts[31] = new ImagePrompt(boggle_width, boggle_height, boggle_data);
   prompts[32] = new ImagePrompt(empty_width, empty_height, empty_data);
   prompts[33] = new ImagePrompt(kwikmath_width, kwikmath_height, kwikmath_data);
-  prompts[34] = new FunFact("You have had 4 walking meetings this week. Good job!");
-  prompts[35] = new FunFact("You used the standing desk for an average of 4,5 hours a day last week.");
-  prompts[36] = new FunFact("You drank an average of 6 glasses of water a day last week, this is more then the week before.");
-  prompts[37] = new GetCreative("Think of your favorite animal!");
-  prompts[38] = new GetCreative("The wheel of life, rate 1");
-  prompts[39] = new Goal("Explore: Get to know you colleagues better! Ask them a fun question!");
-  
-  
+
   // hoogste prompt = maximaal aantal_prompts - 1
 
   printer.inverseOn();

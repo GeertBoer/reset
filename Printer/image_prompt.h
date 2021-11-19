@@ -11,7 +11,7 @@ class ImagePrompt : public Prompt
     String head;
   public:
     ImagePrompt(int width, int height, const uint8_t* data);
-    ImagePrompt(int width, int height, const uint8_t* data, String head);
+    ImagePrompt(String head, int width, int height, const uint8_t* data);
     void print(Adafruit_Thermal *printer);
 };
 
@@ -21,7 +21,7 @@ ImagePrompt::ImagePrompt(int width, int height, const uint8_t* data) {
   this->data = data;
 }
 
-ImagePrompt::ImagePrompt(int width, int height, const uint8_t* data, String head) {
+ImagePrompt::ImagePrompt(String head, int width, int height, const uint8_t* data) {
   this->width = width;
   this->height = height;
   this->data = data;
