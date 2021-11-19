@@ -55,7 +55,7 @@ void setup() {
   prompts[30] = new ImagePrompt("Sudoku", sudoku_width, sudoku_height, sudoku_data);
   prompts[31] = new ImagePrompt(boggle_width, boggle_height, boggle_data);
   prompts[32] = new ImagePrompt(empty_width, empty_height, empty_data);
-  prompts[33] = new ImagePrompt(kwikmath_width, kwikmath_height, kwikmath_data);
+  prompts[33] = new ImagePrompt("Arrange the giving digits to make three 3 digits numbers that add up to 999", kwikmath_width, kwikmath_height, kwikmath_data);
 
   // hoogste prompt = maximaal aantal_prompts - 1
 
