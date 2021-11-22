@@ -50,7 +50,7 @@ void setup() {
   prompts[24] = new Question("How many time did you stretch today? Try to keep track of this!");
   prompts[25] = new Question("How many glasses of water did you have today? Try to keep track of this!");
   prompts[26] = new Question("What did you have for lunch today? Try to keep track of this!");
-  prompts[27] = new Question("How did you sleep last night? Try to keep track of this!");
+  prompts[27] = new Question("Did you have a good night's sleep last night? Try to keep track of this!");
   prompts[28] = new Question("Who or what inspires you?");
   prompts[29] = new ImagePrompt("Visualize: The wheel of life, rate 1" , wheel_width, wheel_height, wheel_data);
   prompts[30] = new ImagePrompt("Sudoku", sudoku_width, sudoku_height, sudoku_data);
