@@ -59,7 +59,7 @@ void setup() {
   prompts[33] = new ImagePrompt("Arrange the giving digits to make three 3 digits numbers that add up to 999", kwikmath_width, kwikmath_height, kwikmath_data);
   prompts[34] = new FunFact("You have had 4 walking meetings this week. Good job.");
   prompts[35] = new FunFact("You used the standing desk for an average of 4,5 hours a day last week.");
-  prompts[36] = new FunFact("You drank an average of 6 glasses of water a day last week, this is more then the week before.");
+  prompts[36] = new FunFact("You drank an average of 6 glasses of water a day last week, this is more than the week before.");
   prompts[37] = new GetCreative("Visualize: Think of your favorite animal!");
   prompts[38] = new GetCreative("Visualize: The wheel of life, rate 1");
   prompts[39] = new joke("Milou: \"What are you doing in the fridge?\" \n Lauren: \"The recipe said, rest in fridge for one hour.\"");  
