@@ -28,14 +28,14 @@ void setup() {
   prompts[2] = new Achievement("What are you most proud off?");
   prompts[3] = new Achievement("What do you like best at work?");
   prompts[4] = new FunFact("60% of our team said they have been using the experience cabins to relax this week. What do you to ground between meetings?");
-  prompts[5] = new GetCreative("Visualize: Draw something you love!");
+  prompts[5] = new GetCreative("Draw something you love!");
   prompts[6] = new Goal("What would you like to learn this week?");
   prompts[7] = new Goal("Quick retrospective: What made you move forward this week? What held you back? What should you do next?");
   prompts[8] = new Goal("Stretch your body: make it a habit to stretch every hour!");
   prompts[9] = new Goal("Breath: Take three deep breaths, observe what you feel and continue.");
   prompts[10] = new Goal("Nature: Go for a walk to get some fresh air.");
   prompts[11] = new Goal("Sound: Listen to your favorite song!");
-  prompts[12] = new Question("How do you spend the time traveling between office and home?");
+  prompts[12] = new Question("How do you spend the traveling time between office and home?");
   prompts[13] = new Question("Do you use your traveling time to refocus and relax?");
   prompts[14] = new Question("Do you use you travel time to let go of unproductive thoughts to be fully present on arrival?");
   prompts[15] = new Question("How do you start your day when working from home?  ");
@@ -62,10 +62,10 @@ void setup() {
   prompts[36] = new FunFact("You drank an average of 6 glasses of water a day last week, this is more than the week before.");
   prompts[37] = new GetCreative("Visualize: Think of your favorite animal!");
   prompts[38] = new GetCreative("Visualize: The wheel of life, rate 1");
-  prompts[39] = new joke("Milou: \"What are you doing in the fridge?\" \n Lauren: \"The recipe said, rest in fridge for one hour.\"");  
-  prompts[40] = new joke("Paul: \"I’ve got problems with mathematics.\" \n Richard: \"Me too.\" \n George: \"Yeah, that makes four of us.\"");  
-  prompts[41] = new joke("When I greeted my boss in the morning, he told me to have a good day. \n Who am I to argue? So I thanked him and went back home."); 
-  prompts[42] = new joke("Me: \"Do you think it’s strange to talk to yourself?\" \n Me: \"No.\" ");  
+  prompts[39] = new Joke("Milou: \"What are you doing in the fridge?\" \n Lauren: \"The recipe said, rest in fridge for one hour.\"");  
+  prompts[40] = new Joke("Paul: \"I’ve got problems with mathematics.\" \n Richard: \"Me too.\" \n George: \"Yeah, that makes four of us.\"");  
+  prompts[41] = new Joke("When I greeted my boss in the morning, he told me to have a good day. \n Who am I to argue? So I thanked him and went back home."); 
+  prompts[42] = new Joke("Me: \"Do you think it’s strange to talk to yourself?\" \n Me: \"No.\" ");  
   prompts[43] = new Goal("Get to know you colleagues better! Ask them a fun question!");
   prompts[44] = new Question("Do you experience a relaxed kind of focus working from home, do recognize distractions?");
 
