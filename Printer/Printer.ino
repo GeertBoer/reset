@@ -15,15 +15,19 @@
 
 #include "oocsi_prompt_reciever.h"
 
-OOCSIPromptReciever recv = OOCSIPromptReciever();
-
-Adafruit_Thermal printer(&Serial1);
-
-const int aantal_prompts = 45;
-Prompt* prompts[aantal_prompts];
-
 const char* wifi_ssid = "tue-psk";
 const char* wifi_pass = "r3s3tr3s3t";
+
+const int aantal_prompts = 45;
+
+
+
+
+OOCSIPromptReciever recv = OOCSIPromptReciever();
+Adafruit_Thermal printer(&Serial1);
+Prompt* prompts[aantal_prompts];
+
+
 
 void setup() {
   // put your setup code here, to run once:
