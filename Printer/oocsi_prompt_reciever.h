@@ -15,7 +15,7 @@ class OOCSIPromptReciever
     OOCSI* oocsi;
   public:
     OOCSIPromptReciever();
-    void Connect();
+    void Connect(const char* ssid, const char* password);
     Prompt* Check();
 };
 
@@ -23,9 +23,9 @@ OOCSIPromptReciever::OOCSIPromptReciever() {
   oocsi = new OOCSI();
 }
 
-void OOCSIPromptReciever::Connect() {
+void OOCSIPromptReciever::Connect(const char* ssid, const char* password) {
   Serial.println("connecting");
-  oocsi->connect("ESP-RESET", "oocsi.id.tue.nl", "tue-psk", "r3s3tr3s3t");
+  oocsi->connect("ESP-RESET", "oocsi.id.tue.nl", ssid, password);
   oocsi->subscribe("esp-testchannel");
   oocsi->setLogging(false);
   Serial.println("connected");

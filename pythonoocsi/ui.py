@@ -1,7 +1,9 @@
 from oocsi import OOCSI
 import time
 
-o = OOCSI('PythonScript', 'oocsi.id.tue.nl')
+uname = input("Type your username: ")
+
+o = OOCSI("PC" + uname, 'oocsi.id.tue.nl')
 
 print("\n#############################\nPYTHON PROMPT -> RESET DEVICE\n#############################\n")
 

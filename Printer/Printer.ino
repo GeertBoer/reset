@@ -22,12 +22,15 @@ Adafruit_Thermal printer(&Serial1);
 const int aantal_prompts = 45;
 Prompt* prompts[aantal_prompts];
 
+const char* wifi_ssid = "tue-psk";
+const char* wifi_pass = "r3s3tr3s3t";
+
 void setup() {
   // put your setup code here, to run once:
   //oocsi.connect("ESP-RESET", "oocsi.id.tue.nl", "tue-psk", "r3s3tr3s3t");
   //oocsi.subscribe("esp-testchannel");
 
-  recv.Connect();
+  recv.Connect(wifi_ssid, wifi_pass);
 
   Serial1.begin(19200);
   printer.begin();
