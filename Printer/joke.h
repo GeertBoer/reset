@@ -1,7 +1,7 @@
 #pragma once
 #include "Adafruit_Thermal.h"
 #include "prompt.h"
-#include "header_images/goal_header_image.h"
+#include "header_images/joke_header_image.h"
 
 class Joke : public Prompt
 {
@@ -27,7 +27,7 @@ Joke::Joke(String head, String body) {
 }
 
 void Joke::print(Adafruit_Thermal *printer) {
-  printer->printBitmap(goal_header_image_width, goal_header_image_height, goal_header_image_data);
+  printer->printBitmap(joke_header_image_width, joke_header_image_height, joke_header_image_data);
 
   if (hasHead) {
     printer->setFont('A');

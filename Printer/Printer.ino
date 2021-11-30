@@ -13,6 +13,10 @@
 #include "prompt_images/empty.h"
 #include "prompt_images/kwikmath.h"
 
+#include "oocsi_prompt_reciever.h"
+
+OOCSIPromptReciever recv = OOCSIPromptReciever();
+
 Adafruit_Thermal printer(&Serial1);
 
 const int aantal_prompts = 45;
@@ -20,6 +24,11 @@ Prompt* prompts[aantal_prompts];
 
 void setup() {
   // put your setup code here, to run once:
+  //oocsi.connect("ESP-RESET", "oocsi.id.tue.nl", "tue-psk", "r3s3tr3s3t");
+  //oocsi.subscribe("esp-testchannel");
+
+  recv.Connect();
+
   Serial1.begin(19200);
   printer.begin();
 
@@ -50,7 +59,7 @@ void setup() {
   prompts[24] = new Question("How many time did you stretch today? Try to keep track of this!");
   prompts[25] = new Question("How many glasses of water did you have today? Try to keep track of this!");
   prompts[26] = new Question("What did you have for lunch today? Try to keep track of this!");
-  prompts[27] = new Question("Did you have a good night's sleep last night? Try to keep track of this!");
+  prompts[27] = new Question("Did you have a good night\'s sleep last night? Try to keep track of this!");
   prompts[28] = new Question("Who or what inspires you?");
   prompts[29] = new ImagePrompt("Visualize: The wheel of life, rate 1" , wheel_width, wheel_height, wheel_data);
   prompts[30] = new ImagePrompt("Sudoku", sudoku_width, sudoku_height, sudoku_data);
@@ -62,10 +71,10 @@ void setup() {
   prompts[36] = new FunFact("You drank an average of 6 glasses of water a day last week, this is more than the week before.");
   prompts[37] = new GetCreative("Visualize: Think of your favorite animal!");
   prompts[38] = new GetCreative("Visualize: The wheel of life, rate 1");
-  prompts[39] = new Joke("Milou: \"What are you doing in the fridge?\" \n Lauren: \"The recipe said, rest in fridge for one hour.\"");  
-  prompts[40] = new Joke("Paul: \"I’ve got problems with mathematics.\" \n Richard: \"Me too.\" \n George: \"Yeah, that makes four of us.\"");  
-  prompts[41] = new Joke("When I greeted my boss in the morning, he told me to have a good day. \n Who am I to argue? So I thanked him and went back home."); 
-  prompts[42] = new Joke("Me: \"Do you think it’s strange to talk to yourself?\" \n Me: \"No.\" ");  
+  prompts[39] = new Joke("Milou: \"What are you doing in the fridge?\" \n Lauren: \"The recipe said, rest in fridge for one hour.\"");
+  prompts[40] = new Joke("Paul: \"I\'ve got problems with mathematics.\" \n Richard: \"Me too.\" \n George: \"Yeah, that makes four of us.\"");
+  prompts[41] = new Joke("When I greeted my boss in the morning, he told me to have a good day. \n Who am I to argue? So I thanked him and went back home.");
+  prompts[42] = new Joke("Me: \"Do you think it\'s strange to talk to yourself?\" \n Me: \"No.\" ");
   prompts[43] = new Goal("Get to know you colleagues better! Ask them a fun question!");
   prompts[44] = new Question("Do you experience a relaxed kind of focus working from home, do recognize distractions?");
 
@@ -74,15 +83,37 @@ void setup() {
   printer.inverseOn();
   printer.setFont('A');
   printer.setSize('L');
-  printer.println("RESET vN.N");
+  printer.println("RESET:CONNECTED");
+  printer.feed(2);
   printer.inverseOff();
+
 }
 
+
 void loop() {
-  delay(6000);
+  Prompt* p = recv.Check();
+  if (p != NULL)
+  {
+    p->print(&printer);
+    printer.feed(7);
+    delay(2000);
+  }
 
-  prompts[random(0, aantal_prompts)]->print(&printer);
-  printer.feed(7);
+  
+//    delay(6000);
+//  //
+//    prompts[random(0, aantal_prompts)]->print(&printer);
+//    printer.feed(7);
+  //
+  //  delay(300000); // 5 minutes
 
-  delay(300000); // 5 minutes
+//  if (oocsi.check())
+//  {
+//    Serial.println("enter regular check");
+//    Serial.print("greeting: ");
+//    Serial.print(oocsi.getString("greeting", "none"));
+//
+//    Serial.print("joke: ");
+//    Serial.print(oocsi.getString("joke", "none"));
+//  }
 }
