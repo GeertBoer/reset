@@ -1,0 +1,1 @@
+python3.9 ~/Documents/GitHub/reset/pythonoocsi/reset-sender.py
