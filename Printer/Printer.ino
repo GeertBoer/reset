@@ -12,22 +12,24 @@
 #include "prompt_images/boggle.h"
 #include "prompt_images/empty.h"
 #include "prompt_images/kwikmath.h"
-
 #include "oocsi_prompt_reciever.h"
+
+
+
+// SETTINGS: ------------------------
 
 const char* wifi_ssid = "tue-psk";
 const char* wifi_pass = "r3s3tr3s3t";
-
 const int aantal_prompts = 45;
 
+int spaceAfterPrint = 2; // 7 is best for casing V1
 
+// END SETTINGS----------------------
 
 
 OOCSIPromptReciever recv = OOCSIPromptReciever();
 Adafruit_Thermal printer(&Serial1);
 Prompt* prompts[aantal_prompts];
-
-
 
 void setup() {
   // put your setup code here, to run once:
@@ -36,6 +38,7 @@ void setup() {
 
   recv.Connect(wifi_ssid, wifi_pass);
 
+  Serial.begin(19200);
   Serial1.begin(19200);
   printer.begin();
 
@@ -98,29 +101,18 @@ void setup() {
 
 
 void loop() {
-  Prompt* p = recv.Check();
+  Prompt* p = recv.Check(prompts, aantal_prompts);
   if (p != NULL)
   {
     p->print(&printer);
-    printer.feed(7);
+    printer.feed(spaceAfterPrint);
     delay(2000);
   }
 
-  
-//    delay(6000);
-//  //
-//    prompts[random(0, aantal_prompts)]->print(&printer);
-//    printer.feed(7);
-  //
-  //  delay(300000); // 5 minutes
 
-//  if (oocsi.check())
-//  {
-//    Serial.println("enter regular check");
-//    Serial.print("greeting: ");
-//    Serial.print(oocsi.getString("greeting", "none"));
-//
-//    Serial.print("joke: ");
-//    Serial.print(oocsi.getString("joke", "none"));
-//  }
+//  delay(6000);
+//  prompts[random(0, aantal_prompts)]->print(&printer);
+//  printer.feed(7);
+//  delay(300000); // 5 minutes
+
 }

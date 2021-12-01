@@ -16,7 +16,10 @@ class OOCSIPromptReciever
   public:
     OOCSIPromptReciever();
     void Connect(const char* ssid, const char* password);
-    Prompt* Check();
+    Prompt* Check(Prompt* allPrompts[], const int aantalPrompts);
+
+    void enableLogging();
+    void disableLogging();
 };
 
 OOCSIPromptReciever::OOCSIPromptReciever() {
@@ -31,7 +34,7 @@ void OOCSIPromptReciever::Connect(const char* ssid, const char* password) {
   Serial.println("connected");
 }
 
-Prompt* OOCSIPromptReciever::Check() {
+Prompt* OOCSIPromptReciever::Check(Prompt* allPrompts[], const int aantalPrompts) {
   if (oocsi->check())
   {
     Serial.println("pass check");
@@ -53,6 +56,29 @@ Prompt* OOCSIPromptReciever::Check() {
     if (oocsi->has("achievement")) {
       return new Achievement(oocsi->getString("achievement", ""));
     }
+    if (oocsi->has("getfromlist")) {
+      int num = oocsi->getInt("getfromlist", -1);
+      if (num < 0) {
+        Serial.print("Err: num < 0!");
+        return NULL;
+      }
+      if (num >= aantalPrompts) {
+        Serial.print("Err: num >= aantalPrompts!");
+        return NULL;
+      }
+      return allPrompts[num];
+    }
   }
   return NULL;
+}
+
+
+
+void OOCSIPromptReciever::enableLogging() {
+  oocsi->setLogging(true);
+}
+
+
+void OOCSIPromptReciever::disableLogging() {
+  oocsi->setLogging(false);
 }

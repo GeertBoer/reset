@@ -9,7 +9,7 @@ print("\n#############################\nPYTHON PROMPT -> RESET DEVICE\n#########
 
 while 1:
 	print("What do you want to send?")
-	print("(A)chievement, \nget(C)reative, \n(F)unfact, \n(J)oke, \n(Q)uestion")
+	print("(A)chievement, \n(G)et creative, \n(F)unfact, \n(J)oke, \n(Q)uestion, \nGet from (L)ist")
 	print("Or type \"quit\" to quit\n")
 
 	val = input("Type your choice: ")
@@ -17,7 +17,7 @@ while 1:
 
 	if val in ['A', 'a', 'Achievement', 'achievement']:
 	    choice = "achievement"
-	elif val in ['C', 'c', 'Getcreative', 'getcreative']:
+	elif val in ['G', 'g', 'Getcreative', 'getcreative']:
 	    choice = "getcreative"
 	elif val in ['F','f','Funfact', 'funfact']:
 	    choice = "funfact"
@@ -25,6 +25,8 @@ while 1:
 	    choice = "joke"
 	elif val in ['Q','q','Question', 'question']:
 	    choice = "question"
+	elif val in ['L', 'l']:
+	    choice = "getfromlist"
 	elif val == "quit":
 		o.stop()
 		quit()
