@@ -42,18 +42,102 @@ void setup() {
   Serial1.begin(19200);
   printer.begin();
 
+  
+  // Funfact
+  prompts[] = new FunFact("60% of our team said they have been using the experience cabins to relax this week. What do you to ground between meetings?");
+  prompts[] = new FunFact("You have had 4 walking meetings this week. Good job.");
+  prompts[] = new FunFact("You used the standing desk for an average of 4,5 hours a day last week.");
+  prompts[] = new FunFact("You drank an average of 6 glasses of water a day last week, this is more than the week before.");
+
+  prompts[] = new FunFact("Laughing is good for the heart and can increase blood flow by 20%.");
+  prompts[] = new FunFact("Always look on the bright side: being an optimist can help you live longer. ");
+  prompts[] = new FunFact("Exercise will give you more energy, even when you’re tired.");
+  prompts[] = new FunFact("Between 2000 and 2015, the average global life expectancy increased by five years. ");
+  prompts[] = new FunFact("Less than 1% of Americans ride their bike to work, while 50% of Copenhagen residents bike to work or school.");
+  // Mental*
+  prompts[] = new FunFact("Learning a new language or playing a musical instrument gives your brain a boost. ");
+  prompts[] = new FunFact("Feeling stressed? Read! It can lower levels of your cortisol, and other unhealthy stress hormones, by 68%. ");
+  prompts[] = new FunFact("Drinking coffee can reduce the risk of depression, especially for woman. ");
+  prompts[] = new FunFact("Smelling rosemary may increase alertness and improve memory so catch a whiff before a test or important meeting. ");
+  prompts[] = new FunFact("Writing in a journal can make you a happier person!");
+  prompts[] = new FunFact("Chewing gum makes you more alert, relieves stress and reduces anxiety levels. ");
+  prompts[] = new FunFact("Wawling outside can reduce negative thoughts and boost self-esteem.");
+  // Food*
+  prompts[] = new FunFact("Chocolate is good for your skin; its antioxidants improve blood flow and protect against UV damage. ");
+  prompts[] = new FunFact("Almonds, avocados and arugula (the triple A) can boost your sex drive and improve fertility. ");
+  prompts[] = new FunFact("Tea can lover risks of heart attack, certain cancers, type 2 Diabetes and Parkinson’s disease. Just make sure your tea isn’t too sweet! ");
+  prompts[] = new FunFact("Eating oatmeal provides a serotonin boost to calm the brain and improve your mood. ");
+  prompts[] = new FunFact("An apple a day does keep the doctor away. Apples can reduce levels of bad cholesterol to keep your heart healthy. ");
+  prompts[] = new FunFact("The amino acid found in eggs can help improve your reflexes. ");
+  prompts[] = new FunFact("Extra virgin olive oil is the healthiest fat on the planet. ");
+  prompts[] = new FunFact("Vitamin D is as important as calcium in determining bone health, and most people don’t get enough of it.");
+  // Physical*
+  prompts[] = new FunFact("The body has more than 650 muscles.");
+  prompts[] = new FunFact("Sleeping naked can help you burn more calories. ");
+  prompts[] = new FunFact("Walking at a fast pace for three hours or more at least once a week, you can reduce your risk of heart disease by up to 65%. ");
+  prompts[] = new FunFact("Regular activity can ease the severity and reduce the frequency of lower back pain. ");
+  prompts[] = new FunFact("Running is good for you. People who run 12-18 miles a week have a stronger immune system and can increase their bone mineral density. ");
+  // Hydration*
+  prompts[] = new FunFact("Drinking at least five glasses of water a day can reduce your chances of suffering from a heart attack by 40%.");
+  prompts[] = new FunFact("Dehydration can have a negative impact on your mood and energy levels. Drink enough water to ensure you’re always at your best. ");
+  prompts[] = new FunFact("Repeatedly using plastic water bottles can release chemicals into your water. Why not try a reusable bottle instead? It’s good for you and the planet. ");
+  prompts[] = new FunFact("The spinal disc core is comprised of a large volume of water therefore dehydration could lead to back pain. ");
+  prompts[] = new FunFact("Hydration is key for a good complexion. Drinking enough water also makes you less prone to wrinkles.");
+  prompts[] = new FunFact("Water can aid in weight loss because it helps to remove the by-products of fat and if consumed before a meal can make you more satisfied and eat less. ");
+  prompts[] = new FunFact("Your muscles and joints require water in order to stay energized, lubricated and healthy. ");
+  prompts[] = new FunFact("The blue light from your phone can mess with your circadian rhythm.");
+  // Random facts
+  prompts[] = new FunFact("Breathing deeply in moments of stress, or anytime during the day, brings many benefits such as better circulation, decreased anxiety and reduced blood pressure. ");
+  prompts[] = new FunFact("The nose knows: it can remember 50,000 different scents. ");
+  prompts[] = new FunFact("Humans have 46 chromosomes, while peas have 14 and crayfish have 200. ");
+  prompts[] = new FunFact("Left-handed people are more likely to suffer from ADHD. ");
+  prompts[] = new FunFact("The eye muscles are the most active in the body, moving more than 100,000 times a day! ");
+  prompts[] = new FunFact("Humans can cough at 60 miles an hour and sneezes can be 100 miles an hour – which is faster than the average car! ");
+  prompts[] = new FunFact("Although bodies stop growing, noses and ears will not.");
+  prompts[] = new FunFact("The soles of your feet contain more sweat glands and nerve endings per square inch than anywhere else on your body. "); 
+
+  // Creative
+  // Complete the picture*
+  prompts[] = new GetCreative("Complete the Picture: 'Happy as a calm' ");
+  prompts[] = new GetCreative("Complete the Picture: 'I can't get no satisfaction' ");
+  prompts[] = new GetCreative("Complete the Picture: 'Human nature' ");
+  prompts[] = new GetCreative("Complete the Picture: 'Here comes trouble' ");
+  prompts[] = new GetCreative("Complete the Picture: 'The art of noise' ");
+  prompts[] = new GetCreative("Complete the Picture: 'Happiness' ");
+  // Look away from what you are creating*
+  prompts[] = new GetCreative("Look away from what you are creating. \nRules: Draw an object without lifting your pencil from the paper, look at your handpalm and a maximum of 1 minute.' ");
+  
+
+
+  prompts[] = new GetCreative("Draw something you love!");
+  prompts[] = new GetCreative("Visualize: Think of your favorite animal!");
+  prompts[] = new GetCreative("Visualize: The wheel of life, rate 1");
+  
+  // Achievement
   prompts[0] = new Achievement("What was your highlight of today?");
   prompts[1] = new Achievement("What was your biggest success last week?");
   prompts[2] = new Achievement("What are you most proud off?");
   prompts[3] = new Achievement("What do you like best at work?");
-  prompts[4] = new FunFact("60% of our team said they have been using the experience cabins to relax this week. What do you to ground between meetings?");
-  prompts[5] = new GetCreative("Draw something you love!");
+ 
+
+
+
+
+
+  
+
+
+  
+  // Goal
   prompts[6] = new Goal("What would you like to learn this week?");
   prompts[7] = new Goal("Quick retrospective: What made you move forward this week? What held you back? What should you do next?");
   prompts[8] = new Goal("Stretch your body: make it a habit to stretch every hour!");
   prompts[9] = new Goal("Breath: Take three deep breaths, observe what you feel and continue.");
   prompts[10] = new Goal("Nature: Go for a walk to get some fresh air.");
   prompts[11] = new Goal("Sound: Listen to your favorite song!");
+  prompts[43] = new Goal("Get to know you colleagues better! Ask them a fun question!");
+  
+  // Random Questoion
   prompts[12] = new Question("How do you spend the traveling time between office and home?");
   prompts[13] = new Question("Do you use your traveling time to refocus and relax?");
   prompts[14] = new Question("Do you use you travel time to let go of unproductive thoughts to be fully present on arrival?");
@@ -71,22 +155,26 @@ void setup() {
   prompts[26] = new Question("What did you have for lunch today? Try to keep track of this!");
   prompts[27] = new Question("Did you have a good night\'s sleep last night? Try to keep track of this!");
   prompts[28] = new Question("Who or what inspires you?");
+  prompts[44] = new Question("Do you experience a relaxed kind of focus working from home, do recognize distractions?");
+  
+  // Games
   prompts[29] = new ImagePrompt("Visualize: The wheel of life, rate 1" , wheel_width, wheel_height, wheel_data);
   prompts[30] = new ImagePrompt("Sudoku", sudoku_width, sudoku_height, sudoku_data);
   prompts[31] = new ImagePrompt("How many words can you find?", boggle_width, boggle_height, boggle_data);
   prompts[32] = new ImagePrompt("Draw something!" , empty_width, empty_height, empty_data);
   prompts[33] = new ImagePrompt("Arrange the giving digits to make three 3 digits numbers that add up to 999", kwikmath_width, kwikmath_height, kwikmath_data);
-  prompts[34] = new FunFact("You have had 4 walking meetings this week. Good job.");
-  prompts[35] = new FunFact("You used the standing desk for an average of 4,5 hours a day last week.");
-  prompts[36] = new FunFact("You drank an average of 6 glasses of water a day last week, this is more than the week before.");
-  prompts[37] = new GetCreative("Visualize: Think of your favorite animal!");
-  prompts[38] = new GetCreative("Visualize: The wheel of life, rate 1");
+
+  // Jokes
   prompts[39] = new Joke("Milou: \"What are you doing in the fridge?\" \n Lauren: \"The recipe said, rest in fridge for one hour.\"");
   prompts[40] = new Joke("Paul: \"I\'ve got problems with mathematics.\" \n Richard: \"Me too.\" \n George: \"Yeah, that makes four of us.\"");
   prompts[41] = new Joke("When I greeted my boss in the morning, he told me to have a good day. \n Who am I to argue? So I thanked him and went back home.");
   prompts[42] = new Joke("Me: \"Do you think it\'s strange to talk to yourself?\" \n Me: \"No.\" ");
-  prompts[43] = new Goal("Get to know you colleagues better! Ask them a fun question!");
-  prompts[44] = new Question("Do you experience a relaxed kind of focus working from home, do recognize distractions?");
+
+
+
+
+
+
 
   // hoogste prompt = maximaal aantal_prompts - 1
 
