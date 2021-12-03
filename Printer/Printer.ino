@@ -98,35 +98,38 @@ void setup() {
 
   // Creative
   // Complete the picture*
-  prompts[] = new GetCreative("Complete the Picture: 'Happy as a calm' ");
-  prompts[] = new GetCreative("Complete the Picture: 'I can't get no satisfaction' ");
-  prompts[] = new GetCreative("Complete the Picture: 'Human nature' ");
-  prompts[] = new GetCreative("Complete the Picture: 'Here comes trouble' ");
-  prompts[] = new GetCreative("Complete the Picture: 'The art of noise' ");
-  prompts[] = new GetCreative("Complete the Picture: 'Happiness' ");
+  prompts[45] = new GetCreative("Complete the Picture: 'Happy as a calm' ");
+  prompts[46] = new GetCreative("Complete the Picture: 'I can't get no satisfaction' ");
+  prompts[47] = new GetCreative("Complete the Picture: 'Human nature' ");
+  prompts[48] = new GetCreative("Complete the Picture: 'Here comes trouble' ");
+  prompts[49] = new GetCreative("Complete the Picture: 'The art of noise' ");
+  prompts[50] = new GetCreative("Complete the Picture: 'Happiness' ");
   // Look away from what you are creating*
-  prompts[] = new GetCreative("Look away from what you are creating. \nRules: Draw an object without lifting your pencil from the paper, look at your handpalm and a maximum of 1 minute.' ");
-  
-
-
-  prompts[] = new GetCreative("Draw something you love!");
-  prompts[] = new GetCreative("Visualize: Think of your favorite animal!");
-  prompts[] = new GetCreative("Visualize: The wheel of life, rate 1");
+  prompts[51] = new GetCreative("Look away from what you are creating. \nRules: Draw an object without lifting your pencil from the paper, look at your handpalm and a maximum of 1 minute.' /nCategory: Love");
+  prompts[52] = new GetCreative("Look away from what you are creating. \nRules: Draw an object without lifting your pencil from the paper, look at your handpalm and a maximum of 1 minute.' /nCategory: Busy");
+  prompts[53] = new GetCreative("Look away from what you are creating. \nRules: Draw an object without lifting your pencil from the paper, look at your handpalm and a maximum of 1 minute.' /nCategory: Stress");
+  prompts[54] = new GetCreative("Look away from what you are creating. \nRules: Draw an object without lifting your pencil from the paper, look at your handpalm and a maximum of 1 minute.' /nCategory: Food");
+  prompts[55] = new GetCreative("Look away from what you are creating. \nRules: Draw an object without lifting your pencil from the paper, look at your handpalm and a maximum of 1 minute.' /nCategory: Gadget");
+  prompts[56] = new GetCreative("Look away from what you are creating. \nRules: Draw an object without lifting your pencil from the paper, look at your handpalm and a maximum of 1 minute.' /nCategory: Music");
+      
+  prompts[57] = new GetCreative("Draw something you love!")
+  prompts[58] = new GetCreative("Visualize: Think of your favorite animal!");
+  prompts[59] = new GetCreative("Visualize: The wheel of life, rate 1");
   
   // Achievement
-  prompts[0] = new Achievement("What was your highlight of today?");
-  prompts[1] = new Achievement("What was your biggest success last week?");
-  prompts[2] = new Achievement("What are you most proud off?");
-  prompts[3] = new Achievement("What do you like best at work?");
- 
-
-
-
-
-
+  prompts[] = new Achievement("What was your highlight of today?");
+  prompts[] = new Achievement("What was your biggest success last week?");
+  prompts[] = new Achievement("Celebrate! What are you most proud off?");
+  prompts[] = new Achievement("Celebrate! What do you like best at work?");
+  prompts[] = new Achievement("Choose a colour to celebrate your happiness! ");
+  prompts[] = new Achievement("Create a dance move for your celebration! ");
+  prompts[] = new Achievement("Buy flowers today and celebrate life. ");
+  prompts[] = new Achievement("Tell a colleague of yours what you have achieved this month!");
+  prompts[] = new Achievement("Play your favorite track and dance on it. ");
+  prompts[] = new Achievement("What do you enjoy the most?");
+  prompts[] = new Achievement("Name or think about three important persons in your life. Why are they important? ");
   
-
-
+  
   
   // Goal
   prompts[6] = new Goal("What would you like to learn this week?");
