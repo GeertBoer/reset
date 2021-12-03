@@ -11,16 +11,17 @@
 #include "prompt_images/sudoku.h"
 #include "prompt_images/boggle.h"
 #include "prompt_images/empty.h"
+#include "prompt_images/finishdrawing1.h"
+#include "prompt_images/finishdrawing2.h"
 #include "prompt_images/kwikmath.h"
 #include "oocsi_prompt_reciever.h"
-
 
 
 // SETTINGS: ------------------------
 
 const char* wifi_ssid = "tue-psk";
 const char* wifi_pass = "r3s3tr3s3t";
-const int aantal_prompts = 45;
+const int aantal_prompts = 47;
 
 int spaceAfterPrint = 2; // 7 is best for casing V1
 
@@ -32,10 +33,6 @@ Adafruit_Thermal printer(&Serial1);
 Prompt* prompts[aantal_prompts];
 
 void setup() {
-  // put your setup code here, to run once:
-  //oocsi.connect("ESP-RESET", "oocsi.id.tue.nl", "tue-psk", "r3s3tr3s3t");
-  //oocsi.subscribe("esp-testchannel");
-
   recv.Connect(wifi_ssid, wifi_pass);
 
   Serial.begin(19200);
@@ -129,7 +126,11 @@ void setup() {
   prompts[] = new Achievement("What do you enjoy the most?");
   prompts[] = new Achievement("Name or think about three important persons in your life. Why are they important? ");
   
-  
+ 
+  prompts[0] = new Achievement("What was your highlight of today?");
+  prompts[1] = new Achievement("What was your biggest success last week?");
+  prompts[2] = new Achievement("What are you most proud off?");
+  prompts[3] = new Achievement("What do you like best at work?");
   
   // Goal
   prompts[6] = new Goal("What would you like to learn this week?");
@@ -173,10 +174,10 @@ void setup() {
   prompts[41] = new Joke("When I greeted my boss in the morning, he told me to have a good day. \n Who am I to argue? So I thanked him and went back home.");
   prompts[42] = new Joke("Me: \"Do you think it\'s strange to talk to yourself?\" \n Me: \"No.\" ");
 
-
-
-
-
+  prompts[43] = new Goal("Get to know you colleagues better! Ask them a fun question!");
+  prompts[44] = new Question("Do you experience a relaxed kind of focus working from home, do recognize distractions?");
+  prompts[45] = new ImagePrompt("Finish the drawing:", finishdrawing1_width, finishdrawing1_height, finishdrawing1_data);
+  prompts[46] = new ImagePrompt("Finish the drawing:", finishdrawing2_width, finishdrawing2_height, finishdrawing2_data);
 
 
   // hoogste prompt = maximaal aantal_prompts - 1
@@ -200,10 +201,9 @@ void loop() {
     delay(2000);
   }
 
-
 //  delay(6000);
 //  prompts[random(0, aantal_prompts)]->print(&printer);
 //  printer.feed(7);
 //  delay(300000); // 5 minutes
-
+  delay(50);
 }
