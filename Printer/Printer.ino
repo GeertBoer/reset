@@ -44,57 +44,57 @@ void setup() {
 
   
   // Funfact
-  prompts[] = new FunFact("60% of our team said they have been using the experience cabins to relax this week. What do you to ground between meetings?");
-  prompts[] = new FunFact("You have had 4 walking meetings this week. Good job.");
-  prompts[] = new FunFact("You used the standing desk for an average of 4,5 hours a day last week.");
-  prompts[] = new FunFact("You drank an average of 6 glasses of water a day last week, this is more than the week before.");
+  prompts[0] = new FunFact("60% of our team said they have been using the experience cabins to relax this week. What do you to ground between meetings?");
+  prompts[1] = new FunFact("You have had 4 walking meetings this week. Good job.");
+  prompts[2] = new FunFact("You used the standing desk for an average of 4,5 hours a day last week.");
+  prompts[3] = new FunFact("You drank an average of 6 glasses of water a day last week, this is more than the week before.");
 
-  prompts[] = new FunFact("Laughing is good for the heart and can increase blood flow by 20%.");
-  prompts[] = new FunFact("Always look on the bright side: being an optimist can help you live longer. ");
-  prompts[] = new FunFact("Exercise will give you more energy, even when you’re tired.");
-  prompts[] = new FunFact("Between 2000 and 2015, the average global life expectancy increased by five years. ");
-  prompts[] = new FunFact("Less than 1% of Americans ride their bike to work, while 50% of Copenhagen residents bike to work or school.");
+  prompts[4] = new FunFact("Laughing is good for the heart and can increase blood flow by 20%.");
+  prompts[5] = new FunFact("Always look on the bright side: being an optimist can help you live longer. ");
+  prompts[6] = new FunFact("Exercise will give you more energy, even when you’re tired.");
+  prompts[7] = new FunFact("Between 2000 and 2015, the average global life expectancy increased by five years. ");
+  prompts[8] = new FunFact("Less than 1% of Americans ride their bike to work, while 50% of Copenhagen residents bike to work or school.");
   // Mental*
-  prompts[] = new FunFact("Learning a new language or playing a musical instrument gives your brain a boost. ");
-  prompts[] = new FunFact("Feeling stressed? Read! It can lower levels of your cortisol, and other unhealthy stress hormones, by 68%. ");
-  prompts[] = new FunFact("Drinking coffee can reduce the risk of depression, especially for woman. ");
-  prompts[] = new FunFact("Smelling rosemary may increase alertness and improve memory so catch a whiff before a test or important meeting. ");
-  prompts[] = new FunFact("Writing in a journal can make you a happier person!");
-  prompts[] = new FunFact("Chewing gum makes you more alert, relieves stress and reduces anxiety levels. ");
-  prompts[] = new FunFact("Wawling outside can reduce negative thoughts and boost self-esteem.");
+  prompts[9] = new FunFact("Learning a new language or playing a musical instrument gives your brain a boost. ");
+  prompts[10] = new FunFact("Feeling stressed? Read! It can lower levels of your cortisol, and other unhealthy stress hormones, by 68%. ");
+  prompts[11] = new FunFact("Drinking coffee can reduce the risk of depression, especially for woman. ");
+  prompts[12] = new FunFact("Smelling rosemary may increase alertness and improve memory so catch a whiff before a test or important meeting. ");
+  prompts[13] = new FunFact("Writing in a journal can make you a happier person!");
+  prompts[14] = new FunFact("Chewing gum makes you more alert, relieves stress and reduces anxiety levels. ");
+  prompts[15] = new FunFact("Wawling outside can reduce negative thoughts and boost self-esteem.");
   // Food*
-  prompts[] = new FunFact("Chocolate is good for your skin; its antioxidants improve blood flow and protect against UV damage. ");
-  prompts[] = new FunFact("Almonds, avocados and arugula (the triple A) can boost your sex drive and improve fertility. ");
-  prompts[] = new FunFact("Tea can lover risks of heart attack, certain cancers, type 2 Diabetes and Parkinson’s disease. Just make sure your tea isn’t too sweet! ");
-  prompts[] = new FunFact("Eating oatmeal provides a serotonin boost to calm the brain and improve your mood. ");
-  prompts[] = new FunFact("An apple a day does keep the doctor away. Apples can reduce levels of bad cholesterol to keep your heart healthy. ");
-  prompts[] = new FunFact("The amino acid found in eggs can help improve your reflexes. ");
-  prompts[] = new FunFact("Extra virgin olive oil is the healthiest fat on the planet. ");
-  prompts[] = new FunFact("Vitamin D is as important as calcium in determining bone health, and most people don’t get enough of it.");
+  prompts[16] = new FunFact("Chocolate is good for your skin; its antioxidants improve blood flow and protect against UV damage. ");
+  prompts[17] = new FunFact("Almonds, avocados and arugula (the triple A) can boost your sex drive and improve fertility. ");
+  prompts[18] = new FunFact("Tea can lover risks of heart attack, certain cancers, type 2 Diabetes and Parkinson’s disease. Just make sure your tea isn’t too sweet! ");
+  prompts[19] = new FunFact("Eating oatmeal provides a serotonin boost to calm the brain and improve your mood. ");
+  prompts[20] = new FunFact("An apple a day does keep the doctor away. Apples can reduce levels of bad cholesterol to keep your heart healthy. ");
+  prompts[21] = new FunFact("The amino acid found in eggs can help improve your reflexes. ");
+  prompts[22] = new FunFact("Extra virgin olive oil is the healthiest fat on the planet. ");
+  prompts[23] = new FunFact("Vitamin D is as important as calcium in determining bone health, and most people don’t get enough of it.");
   // Physical*
-  prompts[] = new FunFact("The body has more than 650 muscles.");
-  prompts[] = new FunFact("Sleeping naked can help you burn more calories. ");
-  prompts[] = new FunFact("Walking at a fast pace for three hours or more at least once a week, you can reduce your risk of heart disease by up to 65%. ");
-  prompts[] = new FunFact("Regular activity can ease the severity and reduce the frequency of lower back pain. ");
-  prompts[] = new FunFact("Running is good for you. People who run 12-18 miles a week have a stronger immune system and can increase their bone mineral density. ");
+  prompts[24] = new FunFact("The body has more than 650 muscles.");
+  prompts[25] = new FunFact("Sleeping naked can help you burn more calories. ");
+  prompts[26] = new FunFact("Walking at a fast pace for three hours or more at least once a week, you can reduce your risk of heart disease by up to 65%. ");
+  prompts[27] = new FunFact("Regular activity can ease the severity and reduce the frequency of lower back pain. ");
+  prompts[28] = new FunFact("Running is good for you. People who run 12-18 miles a week have a stronger immune system and can increase their bone mineral density. ");
   // Hydration*
-  prompts[] = new FunFact("Drinking at least five glasses of water a day can reduce your chances of suffering from a heart attack by 40%.");
-  prompts[] = new FunFact("Dehydration can have a negative impact on your mood and energy levels. Drink enough water to ensure you’re always at your best. ");
-  prompts[] = new FunFact("Repeatedly using plastic water bottles can release chemicals into your water. Why not try a reusable bottle instead? It’s good for you and the planet. ");
-  prompts[] = new FunFact("The spinal disc core is comprised of a large volume of water therefore dehydration could lead to back pain. ");
-  prompts[] = new FunFact("Hydration is key for a good complexion. Drinking enough water also makes you less prone to wrinkles.");
-  prompts[] = new FunFact("Water can aid in weight loss because it helps to remove the by-products of fat and if consumed before a meal can make you more satisfied and eat less. ");
-  prompts[] = new FunFact("Your muscles and joints require water in order to stay energized, lubricated and healthy. ");
-  prompts[] = new FunFact("The blue light from your phone can mess with your circadian rhythm.");
+  prompts[29] = new FunFact("Drinking at least five glasses of water a day can reduce your chances of suffering from a heart attack by 40%.");
+  prompts[30] = new FunFact("Dehydration can have a negative impact on your mood and energy levels. Drink enough water to ensure you’re always at your best. ");
+  prompts[31] = new FunFact("Repeatedly using plastic water bottles can release chemicals into your water. Why not try a reusable bottle instead? It’s good for you and the planet. ");
+  prompts[32] = new FunFact("The spinal disc core is comprised of a large volume of water therefore dehydration could lead to back pain. ");
+  prompts[33] = new FunFact("Hydration is key for a good complexion. Drinking enough water also makes you less prone to wrinkles.");
+  prompts[34] = new FunFact("Water can aid in weight loss because it helps to remove the by-products of fat and if consumed before a meal can make you more satisfied and eat less. ");
+  prompts[35] = new FunFact("Your muscles and joints require water in order to stay energized, lubricated and healthy. ");
+  prompts[36] = new FunFact("The blue light from your phone can mess with your circadian rhythm.");
   // Random facts
-  prompts[] = new FunFact("Breathing deeply in moments of stress, or anytime during the day, brings many benefits such as better circulation, decreased anxiety and reduced blood pressure. ");
-  prompts[] = new FunFact("The nose knows: it can remember 50,000 different scents. ");
-  prompts[] = new FunFact("Humans have 46 chromosomes, while peas have 14 and crayfish have 200. ");
-  prompts[] = new FunFact("Left-handed people are more likely to suffer from ADHD. ");
-  prompts[] = new FunFact("The eye muscles are the most active in the body, moving more than 100,000 times a day! ");
-  prompts[] = new FunFact("Humans can cough at 60 miles an hour and sneezes can be 100 miles an hour – which is faster than the average car! ");
-  prompts[] = new FunFact("Although bodies stop growing, noses and ears will not.");
-  prompts[] = new FunFact("The soles of your feet contain more sweat glands and nerve endings per square inch than anywhere else on your body. "); 
+  prompts[37] = new FunFact("Breathing deeply in moments of stress, or anytime during the day, brings many benefits such as better circulation, decreased anxiety and reduced blood pressure. ");
+  prompts[38] = new FunFact("The nose knows: it can remember 50,000 different scents. ");
+  prompts[39] = new FunFact("Humans have 46 chromosomes, while peas have 14 and crayfish have 200. ");
+  prompts[40] = new FunFact("Left-handed people are more likely to suffer from ADHD. ");
+  prompts[41] = new FunFact("The eye muscles are the most active in the body, moving more than 100,000 times a day! ");
+  prompts[42] = new FunFact("Humans can cough at 60 miles an hour and sneezes can be 100 miles an hour – which is faster than the average car! ");
+  prompts[43] = new FunFact("Although bodies stop growing, noses and ears will not.");
+  prompts[44] = new FunFact("The soles of your feet contain more sweat glands and nerve endings per square inch than anywhere else on your body. "); 
 
   // Creative
   // Complete the picture*
