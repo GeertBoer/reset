@@ -37,7 +37,7 @@ void OOCSIPromptReciever::Connect(const char* ssid, const char* password) {
 Prompt* OOCSIPromptReciever::Check(Prompt* allPrompts[], const int aantalPrompts) {
   if (oocsi->check())
   {
-    Serial.println("pass check");
+    Serial.println("Message incoming");
     if (oocsi->has("joke")) {
       return new Joke(oocsi->getString("joke", ""));
     }
