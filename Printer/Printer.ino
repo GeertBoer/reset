@@ -19,8 +19,8 @@
 
 // SETTINGS: ------------------------
 
-const char* wifi_ssid = "tue-psk";
-const char* wifi_pass = "r3s3tr3s3t";
+const char* wifi_ssid = "Ziggo8303271";
+const char* wifi_pass = "GcnwCsecry3c";
 const int aantal_prompts = 113;
 
 int spaceAfterPrint = 2; // 7 is best for casing V1
@@ -29,15 +29,16 @@ int spaceAfterPrint = 2; // 7 is best for casing V1
 
 
 OOCSIPromptReciever recv = OOCSIPromptReciever();
-Adafruit_Thermal printer(&Serial1);
+Adafruit_Thermal* printer = new Adafruit_Thermal(&Serial1);
 Prompt* prompts[aantal_prompts];
 
 void setup() {
   recv.Connect(wifi_ssid, wifi_pass);
+  recv.enableLogging();
 
   Serial.begin(19200);
   Serial1.begin(19200);
-  printer.begin();
+  printer->begin();
 
   
   // Funfact
@@ -188,13 +189,12 @@ void setup() {
 
   // hoogste prompt = maximaal aantal_prompts - 1
 
-  printer.inverseOn();
-  printer.setFont('A');
-  printer.setSize('L');
-  printer.println("RESET:CONNECTED");
-  printer.feed(2);
-  printer.inverseOff();
-
+  printer->inverseOn();
+  printer->setFont('A');
+  printer->setSize('L');
+  printer->println("RESET:CONNECTED");
+  printer->feed(2);
+  printer->inverseOff();
 }
 
 
@@ -202,8 +202,13 @@ void loop() {
   Prompt* p = recv.Check(prompts, aantal_prompts);
   if (p != NULL)
   {
-    p->print(&printer);
-    printer.feed(spaceAfterPrint);
+    printer->wake();
+    Serial.println("4");
+    p->print(printer);
+    Serial.println("5");
+    printer->feed(spaceAfterPrint);
+    Serial.println("6");
+    printer->sleep();
     delay(2000);
   }
 
@@ -211,5 +216,5 @@ void loop() {
 //  prompts[random(0, aantal_prompts)]->print(&printer);
 //  printer.feed(7);
 //  delay(300000); // 5 minutes
-  delay(50);
+  delay(200);
 }

@@ -35,6 +35,7 @@ void OOCSIPromptReciever::Connect(const char* ssid, const char* password) {
 }
 
 Prompt* OOCSIPromptReciever::Check(Prompt* allPrompts[], const int aantalPrompts) {
+  Serial.println("Check");
   if (oocsi->check())
   {
     Serial.println("Message incoming");
@@ -66,9 +67,11 @@ Prompt* OOCSIPromptReciever::Check(Prompt* allPrompts[], const int aantalPrompts
         Serial.print("Err: num >= aantalPrompts!");
         return NULL;
       }
+      Serial.println("1");
       return allPrompts[num];
     }
   }
+  Serial.println("2");
   return NULL;
 }
 
