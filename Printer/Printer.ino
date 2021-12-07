@@ -216,5 +216,5 @@ void loop() {
 //  prompts[random(0, aantal_prompts)]->print(&printer);
 //  printer.feed(7);
 //  delay(300000); // 5 minutes
-  delay(200);
+  delay(1500);
 }
