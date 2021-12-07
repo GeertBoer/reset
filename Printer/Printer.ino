@@ -19,8 +19,8 @@
 
 // SETTINGS: ------------------------
 
-const char* wifi_ssid = "Ziggo8303271";
-const char* wifi_pass = "GcnwCsecry3c";
+const char* wifi_ssid = "tue-psk";
+const char* wifi_pass = "r3s3tr3s3t";
 const int aantal_prompts = 113;
 
 int spaceAfterPrint = 2; // 7 is best for casing V1
