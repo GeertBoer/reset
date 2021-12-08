@@ -203,18 +203,10 @@ void loop() {
   if (p != NULL)
   {
     printer->wake();
-    Serial.println("4");
     p->print(printer);
-    Serial.println("5");
     printer->feed(spaceAfterPrint);
-    Serial.println("6");
     printer->sleep();
-    delay(2000);
   }
 
-//  delay(6000);
-//  prompts[random(0, aantal_prompts)]->print(&printer);
-//  printer.feed(7);
-//  delay(300000); // 5 minutes
   delay(1500);
 }
