@@ -199,6 +199,9 @@ void setup() {
 
 
 void loop() {
+
+  // Deze wijziging is om Pull requests te testen
+  
   Prompt* p = recv.Check(prompts, aantal_prompts);
   if (p != NULL)
   {
