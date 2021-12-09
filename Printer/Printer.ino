@@ -19,7 +19,7 @@
 
 // SETTINGS: ------------------------
 
-const char* wifi_ssid = "resetwifi_4g";
+const char* wifi_ssid = "tue-psk";
 const char* wifi_pass = "r3s3tr3s3t";
 const int aantal_prompts = 113;
 
@@ -40,7 +40,11 @@ void setup() {
   Serial1.begin(19200);
   printer->begin();
 
-  
+  delay(1000);
+  Serial.println();
+  Serial.println("START");
+
+
   // Funfact
   prompts[0] = new FunFact("60% of our team said they have been using the experience cabins to relax this week. What do you to ground between meetings?");
   prompts[1] = new FunFact("You have had 4 walking meetings this week. Good job.");
@@ -52,7 +56,7 @@ void setup() {
   prompts[6] = new FunFact("Exercise will give you more energy, even when you’re tired.");
   prompts[7] = new FunFact("Between 2000 and 2015, the average global life expectancy increased by five years. ");
   prompts[8] = new FunFact("Less than 1% of Americans ride their bike to work, while 50% of Copenhagen residents bike to work or school.");
-  
+
   // Mental
   prompts[9] = new FunFact("Learning a new language or playing a musical instrument gives your brain a boost. ");
   prompts[10] = new FunFact("Feeling stressed? Read! It can lower levels of your cortisol, and other unhealthy stress hormones, by 68%. ");
@@ -61,7 +65,7 @@ void setup() {
   prompts[13] = new FunFact("Writing in a journal can make you a happier person!");
   prompts[14] = new FunFact("Chewing gum makes you more alert, relieves stress and reduces anxiety levels. ");
   prompts[15] = new FunFact("Wawling outside can reduce negative thoughts and boost self-esteem.");
-  
+
   // Food
   prompts[16] = new FunFact("Chocolate is good for your skin; its antioxidants improve blood flow and protect against UV damage. ");
   prompts[17] = new FunFact("Almonds, avocados and arugula (the triple A) can boost your sex drive and improve fertility. ");
@@ -71,14 +75,14 @@ void setup() {
   prompts[21] = new FunFact("The amino acid found in eggs can help improve your reflexes. ");
   prompts[22] = new FunFact("Extra virgin olive oil is the healthiest fat on the planet. ");
   prompts[23] = new FunFact("Vitamin D is as important as calcium in determining bone health, and most people don’t get enough of it.");
-  
+
   // Physical
   prompts[24] = new FunFact("The body has more than 650 muscles.");
   prompts[25] = new FunFact("Sleeping naked can help you burn more calories. ");
   prompts[26] = new FunFact("Walking at a fast pace for three hours or more at least once a week, you can reduce your risk of heart disease by up to 65%. ");
   prompts[27] = new FunFact("Regular activity can ease the severity and reduce the frequency of lower back pain. ");
   prompts[28] = new FunFact("Running is good for you. People who run 12-18 miles a week have a stronger immune system and can increase their bone mineral density. ");
-  
+
   // Hydration
   prompts[29] = new FunFact("Drinking at least five glasses of water a day can reduce your chances of suffering from a heart attack by 40%.");
   prompts[30] = new FunFact("Dehydration can have a negative impact on your mood and energy levels. Drink enough water to ensure you’re always at your best. ");
@@ -88,7 +92,7 @@ void setup() {
   prompts[34] = new FunFact("Water can aid in weight loss because it helps to remove the by-products of fat and if consumed before a meal can make you more satisfied and eat less. ");
   prompts[35] = new FunFact("Your muscles and joints require water in order to stay energized, lubricated and healthy. ");
   prompts[36] = new FunFact("The blue light from your phone can mess with your circadian rhythm.");
-  
+
   // Random facts
   prompts[37] = new FunFact("Breathing deeply in moments of stress, or anytime during the day, brings many benefits such as better circulation, decreased anxiety and reduced blood pressure. ");
   prompts[38] = new FunFact("The nose knows: it can remember 50,000 different scents. ");
@@ -97,7 +101,7 @@ void setup() {
   prompts[41] = new FunFact("The eye muscles are the most active in the body, moving more than 100,000 times a day! ");
   prompts[42] = new FunFact("Humans can cough at 60 miles an hour and sneezes can be 100 miles an hour – which is faster than the average car! ");
   prompts[43] = new FunFact("Although bodies stop growing, noses and ears will not.");
-  prompts[44] = new FunFact("The soles of your feet contain more sweat glands and nerve endings per square inch than anywhere else on your body. "); 
+  prompts[44] = new FunFact("The soles of your feet contain more sweat glands and nerve endings per square inch than anywhere else on your body. ");
 
   // Creative
   // Complete the picture
@@ -107,7 +111,7 @@ void setup() {
   prompts[48] = new GetCreative("Complete the Picture: 'Here comes trouble' ");
   prompts[49] = new GetCreative("Complete the Picture: 'The art of noise' ");
   prompts[50] = new GetCreative("Complete the Picture: 'Happiness' ");
-  
+
   // Look away from what you are creating
   prompts[51] = new GetCreative("Look away from what you are creating. \nRules: Draw an object without lifting your pencil from the paper, look at your handpalm and a maximum of 1 minute.' /nCategory: Love");
   prompts[52] = new GetCreative("Look away from what you are creating. \nRules: Draw an object without lifting your pencil from the paper, look at your handpalm and a maximum of 1 minute.' /nCategory: Busy");
@@ -115,11 +119,11 @@ void setup() {
   prompts[54] = new GetCreative("Look away from what you are creating. \nRules: Draw an object without lifting your pencil from the paper, look at your handpalm and a maximum of 1 minute.' /nCategory: Food");
   prompts[55] = new GetCreative("Look away from what you are creating. \nRules: Draw an object without lifting your pencil from the paper, look at your handpalm and a maximum of 1 minute.' /nCategory: Gadget");
   prompts[56] = new GetCreative("Look away from what you are creating. \nRules: Draw an object without lifting your pencil from the paper, look at your handpalm and a maximum of 1 minute.' /nCategory: Music");
-      
+
   prompts[57] = new GetCreative("Draw something you love!");
   prompts[58] = new GetCreative("Visualize: Think of your favorite animal!");
   prompts[59] = new GetCreative("Visualize: The wheel of life, rate 1");
-  
+
   // Achievement
   prompts[60] = new Achievement("What was your highlight of today?");
   prompts[61] = new Achievement("What was your biggest success last week?");
@@ -132,13 +136,13 @@ void setup() {
   prompts[68] = new Achievement("Play your favorite track and dance on it. ");
   prompts[69] = new Achievement("What do you enjoy the most?");
   prompts[70] = new Achievement("Name or think about three important persons in your life. Why are they important? ");
-  
- 
+
+
   prompts[71] = new Achievement("What was your highlight of today?");
   prompts[72] = new Achievement("What was your biggest success last week?");
   prompts[73] = new Achievement("What are you most proud off?");
   prompts[74] = new Achievement("What do you like best at work?");
-  
+
   // Goal
   prompts[75] = new Goal("What would you like to learn this week?");
   prompts[76] = new Goal("Quick retrospective: What made you move forward this week? What held you back? What should you do next?");
@@ -147,7 +151,7 @@ void setup() {
   prompts[79] = new Goal("Nature: Go for a walk to get some fresh air.");
   prompts[80] = new Goal("Sound: Listen to your favorite song!");
   prompts[81] = new Goal("Get to know you colleagues better! Ask them a fun question!");
-  
+
   // Random Questoion
   prompts[82] = new Question("How do you spend the traveling time between office and home?");
   prompts[83] = new Question("Do you use your traveling time to refocus and relax?");
@@ -167,7 +171,7 @@ void setup() {
   prompts[97] = new Question("Did you have a good night\'s sleep last night? Try to keep track of this!");
   prompts[98] = new Question("Who or what inspires you?");
   prompts[99] = new Question("Do you experience a relaxed kind of focus working from home, do recognize distractions?");
-  
+
   // Games
   prompts[100] = new ImagePrompt("Visualize: The wheel of life, rate 1" , wheel_width, wheel_height, wheel_data);
   prompts[101] = new ImagePrompt("Sudoku", sudoku_width, sudoku_height, sudoku_data);
@@ -186,7 +190,6 @@ void setup() {
   prompts[111] = new ImagePrompt("Finish the drawing:", finishdrawing1_width, finishdrawing1_height, finishdrawing1_data);
   prompts[112] = new ImagePrompt("Finish the drawing:", finishdrawing2_width, finishdrawing2_height, finishdrawing2_data);
 
-
   // hoogste prompt = maximaal aantal_prompts - 1
 
   printer->inverseOn();
@@ -197,19 +200,24 @@ void setup() {
   printer->inverseOff();
 }
 
-
+int i = 0;
 void loop() {
-
-  // Deze wijziging is om Pull requests te testen
-  
+//  while (50)
+//  {
+//    Serial.print("Timing ");
+//    Serial.println(i++);
+//    delay(30);
+//  }
   Prompt* p = recv.Check(prompts, aantal_prompts);
   if (p != NULL)
   {
+    Serial.println("receive");
+    delay(200);
     printer->wake();
     p->print(printer);
     printer->feed(spaceAfterPrint);
     printer->sleep();
+    Serial.println("printed");
   }
-
-  delay(1500);
+  delay(100);
 }
