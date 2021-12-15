@@ -7,7 +7,7 @@ void setup() {
   Serial.println();
   delay(2000);
   Serial.println("Welkom dat je kijkt");
-  sender = new OocsiSender("resetmobile","r3s3tr3s3t");
+  sender = new OocsiSender("resetmobile", "r3s3tr3s3t");
 }
 
 int currentValue = 0;
@@ -54,17 +54,18 @@ void loop() {
     Serial.println(total);
     sender->Send("There's more noise than usual \nat this time. Does that impact \nyour workflow?");
     delay(1000);
-    
+
     for (int i = 0; i < average_size; i++)
     {
       moving_average[i] = 0;
-    }
-  }
-
+    }   
+  }     
+        
   delay(40);
   sender->Ping();
-//  if (digitalRead(0) == LOW){
-//    delete sender;
-//    sender = new OocsiSender("Ziggo8303271","GcnwCsecry3c");
-//  }
-}
+  
+  //  if (digitalRead(0) == LOW){
+  //    delete sender;
+  //    sender = new OocsiSender("Ziggo8303271","GcnwCsecry3c");
+  //  } 
+}       

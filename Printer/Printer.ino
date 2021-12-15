@@ -200,14 +200,8 @@ void setup() {
   printer->inverseOff();
 }
 
-int i = 0;
+
 void loop() {
-//  while (50)
-//  {
-//    Serial.print("Timing ");
-//    Serial.println(i++);
-//    delay(30);
-//  }
   Prompt* p = recv.Check(prompts, aantal_prompts);
   if (p != NULL)
   {
