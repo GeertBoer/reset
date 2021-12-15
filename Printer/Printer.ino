@@ -8,6 +8,7 @@
 #include "prompt_images/wheel.h"
 #include "image_prompt.h"
 #include "joke.h"
+#include "officeinfo.h"
 #include "prompt_images/sudoku.h"
 #include "prompt_images/boggle.h"
 #include "prompt_images/empty.h"

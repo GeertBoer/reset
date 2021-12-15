@@ -8,6 +8,7 @@
 #include "getcreative.h"
 #include "goal.h"
 #include "joke.h"
+#include "officeinfo.h"
 
 class OOCSIPromptReciever
 {
@@ -55,6 +56,9 @@ Prompt* OOCSIPromptReciever::Check(Prompt* allPrompts[], const int aantalPrompts
     }
     if (oocsi->has("achievement")) {
       return new Achievement(oocsi->getString("achievement", ""));
+    }
+    if (oocsi->has("officeinfo")) {
+      return new OfficeInfo(oocsi->getString("officeinfo", ""));
     }
     if (oocsi->has("getfromlist")) {
       int num = oocsi->getInt("getfromlist", -1);
