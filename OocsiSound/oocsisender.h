@@ -8,6 +8,7 @@ private:
 	OOCSI* oocsi;
 public:
 	OocsiSender(const char* ssid, const char* passw);
+  void Ping();
 	void Send(char* message);
   void SendInt(int message);
 };
@@ -26,15 +27,21 @@ void OocsiSender::Send(char* message)
 {
   Serial.println("sending message");
 	oocsi->newMessage("esp-testchannel");
-	oocsi->addString("greeting" , message);
+	oocsi->addString("funfact" , message);
 	oocsi->sendMessage();
 	oocsi->check();
 }
+
 void OocsiSender::SendInt(int message) 
 {
   Serial.println("sending message");
   oocsi->newMessage("esp-testchannel");
   oocsi->addInt("count" , message);
   oocsi->sendMessage();
+  oocsi->check();
+}
+
+void OocsiSender::Ping() 
+{
   oocsi->check();
 }

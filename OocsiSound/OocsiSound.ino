@@ -3,13 +3,11 @@ OocsiSender* sender;
 
 void setup() {
   // put your setup code here, to run once:
- 
   Serial.begin(115200);
   Serial.println();
   delay(2000);
   Serial.println("Welkom dat je kijkt");
-  sender = new OocsiSender("Beerenboom","SQAAVCAA");
-  
+  sender = new OocsiSender("resetmobile","r3s3tr3s3t");
 }
 
 int currentValue = 0;
@@ -22,51 +20,51 @@ int pointer_average = 0;
 
 unsigned long oldMillis = millis();
 bool modee = false;
+int highest = 0;
 void loop() {
-  Serial.println("sending msg..");
-  sender->SendInt(analogRead(1));
+  // calculate moving average
+  currentValue = analogRead(1);
+
+  delta = currentValue - lastValue;
+  if (delta < 0) {
+    delta *= -1;
+  }
+  lastValue = currentValue;
+
+  moving_average[pointer_average] = delta;
+
+  pointer_average++;
+  if (pointer_average >= average_size)
+  {
+    pointer_average = 0;
+  }
+
+  unsigned long total = 0;
+  for (int i = 0; i < average_size; i++)
+  {
+    total += moving_average[i];
+  }
+  total = total / average_size;
+  if (total > highest) {
+    highest = total;
+  }
+
+  if (total > 800) {
+    Serial.print("Sending prompt... ");
+    Serial.println(total);
+    sender->Send("There's more noise than usual \nat this time. Does that impact \nyour workflow?");
+    delay(1000);
+    
+    for (int i = 0; i < average_size; i++)
+    {
+      moving_average[i] = 0;
+    }
+  }
+
   delay(40);
-//  // calculate moving average
-//  currentValue = analogRead(1);
-//
-//  delta = currentValue - lastValue;
-//  if (delta < 0) {
-//    delta *= -1;
+  sender->Ping();
+//  if (digitalRead(0) == LOW){
+//    delete sender;
+//    sender = new OocsiSender("Ziggo8303271","GcnwCsecry3c");
 //  }
-//  lastValue = currentValue;
-//
-//  moving_average[pointer_average] = delta;
-//
-//  pointer_average++;
-//  if (pointer_average >= average_size)
-//  {
-//    pointer_average = 0;
-//  }
-//
-//  unsigned long total = 0;
-//  for (int i = 0; i < average_size; i++)
-//  {
-//    total += moving_average[i];
-//  }
-//
-//  total = total / average_size;
-//  Serial.println(total);
-//  // done with moving average
-//
-//  // send total over oocsi
-//  if (total > 1000) {
-//    
-//    //    Serial.println("HAII");
-//    for (int i = 0; i < average_size; i++)
-//    {
-//      moving_average[i] = 0;
-//    }
-//    delay(1000);
-//  }
-//
-//  delay(150);
-//
-//  digitalWrite(1, modee);
-//  modee = !modee;
-//  delay(100);
 }
