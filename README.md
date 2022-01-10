@@ -1,4 +1,5 @@
 # RESET
+a project by Bob Schellekens, Milou Jansen, Lauren Hageman and Geert Boer for TU/e Industrial Design Pre-Master
 
 ## Welcome to our repository
 This is where the code of the Reset device can be found. 
