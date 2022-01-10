@@ -7,5 +7,5 @@ There is software for:
 * The environmental noise sensor [here](https://github.com/GeertBoer/reset/tree/main/OocsiSound)
 * Python script for remotely and manually printing prompts [here](https://github.com/GeertBoer/reset/tree/main/pythonoocsi)
 
-
-![](https://github.com/GeertBoer/reset/blob/main/resetdevice.png)
+![RESET schematic](https://github.com/GeertBoer/reset/blob/main/RESET%20schematic.jpg)
+![RESET printer in action](https://github.com/GeertBoer/reset/blob/main/resetdevice.png)
