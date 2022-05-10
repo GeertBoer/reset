@@ -20,7 +20,7 @@
 
 // SETTINGS: ------------------------
 
-const char* wifi_ssid = "resetmobile";
+const char* wifi_ssid = "tue-psk";
 const char* wifi_pass = "r3s3tr3s3t";
 const int aantal_prompts = 113;
 

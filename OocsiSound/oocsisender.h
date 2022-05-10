@@ -27,7 +27,7 @@ void OocsiSender::Send(char* message)
 {
   Serial.println("sending message");
 	oocsi->newMessage("esp-testchannel");
-	oocsi->addString("funfact" , message);
+	oocsi->addString("officeinfo" , message);
 	oocsi->sendMessage();
 	oocsi->check();
 }
